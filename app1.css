@@ -1,0 +1,264 @@
+@font-face{
+    font-family:halloween;
+    src:url(additionals/Pumpkin\ Face\ -\ personal\ use.otf);
+}
+@font-face{
+    font-family:decent;
+    src:url(additionals/orange\ juice\ 2.0.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+#front_page{
+    background:url("additionals/background3.jpg");
+    background-attachment:fixed;
+    background-size:cover;
+}
+#sign_up{
+    bottom:4vh;
+    left:25vw;
+}
+#sign_in{
+    right:25vw;
+    top:11vh;
+}
+#sign_up,#sign_in{
+    position:absolute;
+    min-width:300px;
+    min-height:250px;
+    height:40vh;
+    width:25vw;
+    box-shadow:0 0 30px 20px rgba(0, 0, 0, 0.9);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-evenly;
+    border-radius:40px;
+    border:solid rgb(194, 194, 194) 4px;
+}
+#sign_up::before,#sign_in::before{
+    content: '';
+    position:absolute;
+    height:40vh;
+    width:25vw;
+    min-width:300px;
+    min-height:250px;
+    background:url("additionals/background3.jpg");
+    background-attachment:fixed;
+    background-size:cover;
+    border-radius:40px;
+    filter:blur(3px);
+}
+#eyes1,#eyes2{
+    position:absolute;
+    cursor:pointer;
+}
+#eye_open1,#eye_open2,#eye_slash1,#eye_slash2{
+    position:absolute;
+    transform:translate(-200%,2.2vh) scale(1.5);
+}
+::-moz-placeholder {
+    opacity: .8;
+    color:rgb(219, 42, 11);
+    text-shadow:none;
+}
+#sign_up input[type="text"],#sign_up input[type="password"],#sign_in input[type="text"],#sign_in input[type="password"]{
+    font-size:1.4em;
+    font-weight:bold;
+    min-width:70%;
+    border:4px solid white;
+    text-align:center;
+    padding:1vh 1vw;   
+    color:rgb(0, 0, 0);
+    background-color:rgba(255, 255, 255, .5);
+    border-radius:20px;
+    z-index:1;
+}
+#sign_up input[type="submit"],#sign_in input[type="submit"]{
+    cursor:pointer;
+    font-family:halloween;
+    color:white;
+    z-index:1;
+    padding:4% 8%;
+    border-radius:50px;
+    font-size:190%;
+    background-color: rgb(0, 174, 255);
+    transition:100ms font-size,100ms box-shadow,100ms border; 
+    border:solid 5px rgba(0,0,0,.5);
+}
+#sign_up input[type="submit"]:active,#sign_in input[type="submit"]:active{
+   box-shadow:inset 0 0 5px 3px rgba(0,0,0,1);
+   border:solid 5px rgba(0,0,0,.2);
+   font-size:185%;
+}
+#forgot_pw{
+    color:rgb(233, 68, 3);
+    text-decoration:none;
+    text-transform:capitalize;
+    font-size :1.8em;
+    font-family:monospace;
+    z-index:1;
+    font-weight:bold;
+}
+#forgot_pw:hover{
+    text-decoration:underline;
+}
+#sign_in label{
+    color:rgba(255, 255, 255,1);
+    font-family:monospace;
+    font-size:1.8em;
+    font-weight:bold;
+    text-transform:capitalize;
+    align-self:center;
+    transform:translate(-18%,35%);
+}
+#sign_in #remember_me{
+    appearance:none;
+    background-color:white;
+    height:1.5vw;
+    width:4vw;
+    min-height:20px;
+    min-width:50px;
+    border-radius:50px;
+    transform:translate(.4vw,.4vw);
+    transition:background-color 300ms;
+}
+#sign_in #remember_me:checked{
+    background-color:rgb(0, 81, 255);
+}
+#remember_me::before{
+    content:'';
+    position:absolute;
+    min-height:22px;
+    min-width:22px;
+    height:1.8vw;
+    width:1.8vw;
+    background-color:rgb(255, 255, 255);
+    border:solid rgb(77, 77, 77) 5px;
+    border-radius:50%;
+    transform:translate(-5%,-18%);
+    transition:transform 300ms ,background-color 300ms;
+}
+#remember_me:checked::before{
+    background-color:rgba(255,255,255,.5);
+    border-color:white;
+    transform:translate(85%,-18%);
+}
+#nav_bar_check{
+   display:none;
+}
+#navigation{
+    min-height:65px;
+    height:7vh;
+    width:100vw;
+    transition:transform 300ms;
+    filter:opacity(.8);
+    background:linear-gradient(150deg,#2980b9,#2c3e50);
+    display:flex;
+    justify-content:center;
+    align-items:center; 
+    box-shadow:0 0 10px 10px black;
+}
+#navigation .nav_sub{
+    text-decoration:none;
+    padding:0 4vw;
+    font-family:decent;
+    font-size:3.4em;
+    color:white;
+    text-transform:uppercase;
+    transition:color 500ms;
+}
+#navigation .nav_sub:hover{
+    color:rgb(0, 0, 0);
+}
+@media (max-width:1700px){
+    #sign_up input[type="text"],#sign_up input[type="password"],#sign_in input[type="text"],#sign_in input[type="password"]{
+        font-size:1.1em;
+    }
+    #eye_slash1,#eye_slash2,#eye_open1,#eye_open2{
+        transform:translate(-195%,1.8vh) scale(1.5);
+    }
+}
+@media (max-width:1312px){
+    #sign_up input[type="text"],#sign_up input[type="password"],#sign_in input[type="text"],#sign_in input[type="password"]{
+        font-size:1em;
+    }
+    #forgot_pw{
+        font-size:1.5em;
+    }
+}
+@media (min-width:1318px){
+    #sign_in label{
+        font-size:2.1em;
+    }
+}
+@media (max-width:926px){
+    #navigation .nav_sub{
+        font-size:2.2em;
+    }
+}
+@media (max-width:630px){
+    #front_page{
+        width:100vw;
+        height:100vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:space-evenly;
+    }
+    #sign_in,#sign_up{
+        position:static;
+    }
+    #navigation{
+        position:absolute;
+        transform:translate(-100vw,0);
+        filter:opacity(1);
+        z-index:1;
+        height:100vh;
+        width:100vw;
+        font-size:1.2em;
+        flex-direction:column;
+        transition:transform 400ms;
+    }
+    #navigation .nav_sub{
+        padding:5vh 0;
+    }
+    #nav_bar{
+        z-index:2;
+        width:6vw;
+        height:6vw;
+        min-width:50px;
+        min-height:50px;
+        transform:translate(-39vw,-1vh);
+        display:flex;
+        flex-direction:column;
+        justify-content:space-evenly;
+        cursor:pointer;
+        transition:transform 300ms;
+    }
+    .bar{
+        height:.8vw;
+        min-height:8px;
+        background:linear-gradient(150deg,#833ab4,#fd1d1d,#fcb045); 
+        border-radius:12px;
+        transition:transform 1000ms;
+    }
+    #nav_bar_check:checked ~#nav_bar .bar:nth-child(1) {
+        width:60%;
+        transform:translate(80%,80%) rotateZ(45deg);
+    }
+    #nav_bar_check:checked ~#nav_bar .bar:nth-child(3){
+        width:60%;
+        transform:translate(80%,-80%) rotateZ(-45deg);
+    }
+    #nav_bar_check:checked ~#nav_bar .bar{
+        background:white;
+    }
+    #nav_bar_check:checked ~#nav_bar{
+        transform:translate(40vw,0) rotateZ(180deg);
+    }
+    #nav_bar_check:checked ~#navigation{
+        transform:translate(0,0);
+    }
+}
