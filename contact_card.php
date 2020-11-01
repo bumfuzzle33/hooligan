@@ -1,12 +1,12 @@
 <?php
-    if(isset($_POST['email'])){
-        $email = $_POST['email'];
-        $title = $_POST['title'];
-        $message = $_POST['message'];
-        $reciever_mail = "partylikenever@protonmail.com";
-        mail($reciever_mail,$title,$message,$email);
-        header("Location: contact_card.php?mailsent");
-    }
+if (isset($_POST['email'])) {
+    $email = $_POST['email'];
+    $title = $_POST['title'];
+    $message = $_POST['message'];
+    $reciever_mail = "partylikenever@protonmail.com";
+    mail($reciever_mail, $title, $message, $email);
+    header("Location: contact_card.php?mailsent");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,12 +21,13 @@
 
 <body>
     <form>
+        <h1>Contact us</h1>
         <input type="email" name="email" placeholder="Your email" required>
         <input type="text" name="title" placeholder="Title" required>
-        <textarea name="message"  cols="20" rows="9" placeholder="Message" required></textarea>
+        <textarea name="message" cols="20" rows="8" placeholder="Message" required></textarea>
         <input onclick="magic()" type="button" value="submit">
-    </form> 
-     <div id="success">Email Sent!</div>
+    </form>
+    <div id="success">Email Sent!</div>
 </body>
 
 </html>

@@ -7,8 +7,7 @@
     <title>App1</title>
     <link rel="stylesheet" href="app1.css">
     <!-- link to outside opensource free icons -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="app1.js" type="text/javascript" defer></script>
 </head>
 
@@ -38,7 +37,7 @@
     </form>
     <form id="sign_up" action="" method="GET">
         <input type="text" name="username/email_signup" id="" placeholder="username,email or phone">
-        <div>
+        <div id="eye_pw_box">
             <input type="password" name="newpassword" id="password2" placeholder="password">
             <span onclick="eye_function(2)" id="eyes2">
                 <i class="fa fa-eye" id="eye_open2"></i>
